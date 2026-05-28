@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE GINGER | GINGER TEA クロモジと小豆 先行予約</title>
+  <meta name="description" content="国産有機の漢方素材4つだけ。添加物ゼロ、ノンカフェインのジンジャーティー。先行予約20%OFF・送料無料。2026年6〜7月お届け予定。">
+
+  <!-- ▼ GA4 — G-XXXXXXXXXX を実際の Measurement ID に差し替えてコメントを外す -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─────────────────────────────────────────
+       DESIGN TOKENS
+    ───────────────────────────────────────── */
+    :root {
+      --gold:     #C9A017;
+      --gold-lt:  rgba(201,160,23,.18);
+      --gold-md:  rgba(201,160,23,.40);
+      --dark:     #0C0C0C;
+      --dark2:    #111108;
+      --dark3:    #1A1812;
+      --cream:    #FAF8F3;
+      --cream2:   #F3F0E8;
+      --ink:      #1A1A1A;
+      --mid:      #5A5856;
+      --light:    #8A8580;
+      --white:    #F5F2EA;
+      --serif:    'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho',serif;
+      --sans:     'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;
+      --latin:    'Cormorant Garamond',serif;
+      --cap:      640px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ─────────────────────────────────────────
+       LAYOUT
+    ───────────────────────────────────────── */
+    .w { max-width: var(--cap); margin: 0 auto; padding: 0 24px; }
+    .pad { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
+    .pad-sm { padding: 60px 24px; max-width: var(--cap); margin: 0 auto; }
+    .tc { text-align: center; }
+
+    /* ─────────────────────────────────────────
+       SHARED COMPONENTS
+    ───────────────────────────────────────── */
+    .ey {
+      display: block;
+      font-family: var(--latin);
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 16px auto;
+    }
+    .h2 {
+      font-family: var(--serif);
+      font-size: clamp(19px, 5vw, 24px);
+      font-weight: 400;
+      letter-spacing: .06em;
+      line-height: 1.65;
+    }
+    .h2--lt { color: var(--white); }
+    .h2--dk { color: var(--ink); }
+
+    /* CTA BUTTON */
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-align: center;
+      border-radius: 2px;
+      transition: opacity .2s;
+    }
+    .btn:hover { opacity: .88; }
+    .btn--ghost {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+    .btn--ghost:hover { background: var(--gold-lt); }
+
+    /* STICKY CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      padding: 12px 20px 14px;
+      background: rgba(12,12,12,.96);
+      border-top: 1px solid var(--gold-lt);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      backdrop-filter: blur(8px);
+      transform: translateY(100%);
+      transition: transform .3s ease;
+    }
+    .sticky-cta.show { transform: translateY(0); }
+    .sticky-cta__text {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: rgba(245,242,234,.7);
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .sticky-cta__btn {
+      display: inline-block;
+      padding: 11px 22px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: opacity .2s;
+    }
+    .sticky-cta__btn:hover { opacity: .88; }
+
+    /* ─────────────────────────────────────────
+       1. HERO
+    ───────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 56px;
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        url('https://baseec-img-mng.akamaized.net/images/shop_front/theginger-theshop-jp/bb971404ca4c94e72ce281ed664b01c9.png')
+        center center / cover no-repeat;
+    }
+    .hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(12,12,12,.30) 0%,
+        rgba(12,12,12,.20) 40%,
+        rgba(12,12,12,.75) 100%
+      );
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--cap);
+      padding: 0 28px;
+      text-align: center;
+    }
+    .hero__logo {
+      width: 200px;
+      margin: 0 auto 32px;
+      filter: brightness(0) invert(1);
+    }
+    .hero__catch {
+      font-family: var(--serif);
+      font-size: clamp(21px, 5.5vw, 28px);
+      font-weight: 300;
+      letter-spacing: .1em;
+      line-height: 1.7;
+      color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,.5);
+      margin-bottom: 10px;
+    }
+    .hero__sub {
+      font-family: var(--latin);
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: .3em;
+      color: rgba(255,255,255,.65);
+      margin-bottom: 32px;
+    }
+    .hero__dead {
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 16px;
+    }
+    .hero__dead strong { color: var(--gold); font-weight: 400; }
+    .hero__btn {
+      display: inline-block;
+      padding: 16px 40px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      transition: opacity .2s;
+    }
+    .hero__btn:hover { opacity: .88; }
+    .hero__note {
+      font-size: 11px;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .06em;
+    }
+
+    /* scroll indicator */
+    .hero__scroll {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero__scroll span {
+      font-family: var(--latin);
+      font-size: 9px;
+      letter-spacing: .25em;
+      color: rgba(255,255,255,.45);
+    }
+    .hero__scroll svg {
+      width: 16px; height: 16px;
+      stroke: rgba(255,255,255,.4);
+      fill: none;
+      animation: bounce 1.8s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(5px); }
+    }
+
+    /* ─────────────────────────────────────────
+       2. FOR YOU — こんな方へ
+    ───────────────────────────────────────── */
+    .foryou {
+      background: var(--cream);
+      color: var(--ink);
+    }
+    .foryou__inner { padding: 72px 24px; max-width: var(--cap); margin: 0 auto; }
+    .foryou__list {
+      list-style: none;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid rgba(26,24,18,.10);
+    }
+    .foryou__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(26,24,18,.10);
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: .04em;
+      color: var(--ink);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .5s, transform .5s;
+    }
+    .foryou__item.visible { opacity: 1; transform: translateY(0); }
+    .foryou__check {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .foryou__check svg {
+      width: 12px; height: 12px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ─────────────────────────────────────────
+       3. PRODUCT — 商品紹介
+    ───────────────────────────────────────── */
+    .product {
+      background: var(--dark2);
+    }
+    .product__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; text-align: center; }
+    .product__img-wrap {
+      margin: 36px auto 40px;
+      max-width: 280px;
+    }
+    .product__img-wrap img { border-radius: 2px; }
+    .product__name-en {
+      font-family: var(--latin);
+      font-size: 13px;
+      letter-spacing: .25em;
+      color: rgba(245,242,234,.5);
+      margin-bottom: 6px;
+    }
+    .product__name-ja {
+      font-family: var(--serif);
+      font-size: clamp(22px, 6vw, 28px);
+      font-weight: 300;
+      letter-spacing: .12em;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .product__copy {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 2;
+      letter-spacing: .06em;
+      color: rgba(245,242,234,.75);
+      margin-bottom: 32px;
+    }
+    .product__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .product__tag {
+      padding: 6px 14px;
+      border: 1px solid var(--gold-md);
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 11px;
+      letter-spacing: .06em;
+      border-radius: 1px;
+    }
+
+    /* ─────────────────────────────────────────
+       4. THREE REASONS — 3つの特徴
+    ───────────────────────────────────────── */
+    .reasons {
+      background: var(--cream);
+      color: var(--ink);
+    }
+    .reasons__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
+    .reasons__grid {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .reason {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 0 20px;
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(26,24,18,.10);
+      opacity: 0;
+      transform: translateX(-12px);
+      transition: opacity .5s, transform .5s;
+    }
+    .reason:first-child { border-top: 1px solid rgba(26,24,18,.10); }
+    .reason.visible { opacity: 1; transform: translateX(0); }
+    .reason__num {
+      font-family: var(--latin);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .reason__body {}
+    .reason__head {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .reason__text {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--mid);
+      letter-spacing: .03em;
+    }
+
+    /* ─────────────────────────────────────────
+       5. INGREDIENTS — 素材
+    ───────────────────────────────────────── */
+    .ingredients { background: var(--dark); }
+    .ingredients__head { padding: 80px 24px 0; max-width: var(--cap); margin: 0 auto; text-align: center; }
+
+    /* photo grid */
+    .ing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .ing-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: var(--dark3);
+    }
+    .ing-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .ing-card:hover .ing-card__img { transform: scale(1.04); }
+    .ing-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,12,8,.85) 0%, rgba(12,12,8,.10) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px 18px;
+    }
+    .ing-card__num {
+      font-family: var(--latin);
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .ing-card__name {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: .08em;
+    }
+    .ing-card__kanpo {
+      font-family: var(--serif);
+      font-size: 10px;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .06em;
+      margin-top: 2px;
+    }
+
+    /* ingredient list */
+    .ing-list {
+      padding: 0 24px 72px;
+      max-width: var(--cap);
+      margin: 40px auto 0;
+    }
+    .ing-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 20px;
+      align-items: stretch;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(245,242,234,.08);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .5s, transform .5s;
+    }
+    .ing-item:first-child { border-top: 1px solid rgba(245,242,234,.08); }
+    .ing-item.visible { opacity: 1; transform: translateY(0); }
+    .ing-item__img {
+      width: 72px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+      background: var(--dark3);
+      display: block;
+    }
+    .ing-item__body {}
+    .ing-detail__hd {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .ing-detail__num {
+      font-family: var(--latin);
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: var(--gold);
+    }
+    .ing-detail__name {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: .06em;
+    }
+    .ing-detail__kanpo {
+      font-size: 11px;
+      color: rgba(245,242,234,.4);
+      letter-spacing: .05em;
+      margin-bottom: 8px;
+    }
+    .ing-detail__strong {
+      font-family: var(--serif);
+      font-size: 14px;
+      color: rgba(245,242,234,.9);
+      letter-spacing: .05em;
+      margin-bottom: 6px;
+    }
+    .ing-detail__text {
+      font-size: 13px;
+      color: rgba(245,242,234,.55);
+      line-height: 1.9;
+      letter-spacing: .03em;
+    }
+    .ing-note {
+      font-size: 10px;
+      color: rgba(245,242,234,.2);
+      letter-spacing: .05em;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    /* ─────────────────────────────────────────
+       LIFESTYLE BANNER (between sections)
+    ───────────────────────────────────────── */
+    .lifestyle-banner {
+      position: relative;
+      height: 50vw;
+      max-height: 320px;
+      overflow: hidden;
+    }
+    .lifestyle-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .lifestyle-banner__text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(12,12,12,.35);
+      font-family: var(--serif);
+      font-size: clamp(18px, 5vw, 24px);
+      font-weight: 300;
+      letter-spacing: .12em;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,.5);
+    }
+
+    /* ─────────────────────────────────────────
+       6. HOW TO ENJOY — おいしい飲み方
+    ───────────────────────────────────────── */
+    .howtouse { background: var(--cream2); color: var(--ink); }
+    .howtouse__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
+    .howtouse__grid {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .how-card {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .how-card__img-wrap {
+      aspect-ratio: 1/1;
+      border-radius: 2px;
+      overflow: hidden;
+      background: #ddd;
+    }
+    .how-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .how-card__icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 2px;
+      background: var(--gold-lt);
+      border: 1px solid rgba(201,160,23,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .how-card__icon svg { width: 32px; height: 32px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .how-card__label {
+      font-family: var(--latin);
+      font-size: 10px;
+      letter-spacing: .25em;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .how-card__title {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: .06em;
+      margin-bottom: 8px;
+    }
+    .how-card__text {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.85;
+      letter-spacing: .03em;
+    }
+    .howtouse__img {
+      margin-top: 40px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    /* ─────────────────────────────────────────
+       7. OFFER — 先行予約
+    ───────────────────────────────────────── */
+    .offer { background: var(--dark2); }
+    .offer__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; text-align: center; }
+    .offer__title {
+      font-family: var(--serif);
+      font-size: clamp(19px, 5vw, 24px);
+      font-weight: 300;
+      letter-spacing: .1em;
+      color: var(--white);
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    /* countdown */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .countdown__unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .countdown__num {
+      font-family: var(--latin);
+      font-size: clamp(36px, 10vw, 52px);
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      min-width: 2ch;
+      text-align: center;
+    }
+    .countdown__label {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: .15em;
+      color: rgba(245,242,234,.4);
+    }
+    .countdown__sep {
+      font-family: var(--latin);
+      font-size: 40px;
+      font-weight: 300;
+      color: rgba(201,160,23,.4);
+      line-height: 1;
+      align-self: flex-start;
+      padding-top: 4px;
+    }
+
+    /* price box */
+    .offer__box {
+      background: rgba(245,242,234,.04);
+      border: 1px solid rgba(201,160,23,.25);
+      border-radius: 2px;
+      padding: 32px 24px;
+      margin-bottom: 28px;
+    }
+    .offer__product {
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: .06em;
+      color: rgba(245,242,234,.6);
+      margin-bottom: 4px;
+    }
+    .offer__product-sub {
+      font-size: 11px;
+      color: rgba(245,242,234,.3);
+      margin-bottom: 20px;
+    }
+    .offer__was {
+      font-size: 12px;
+      color: rgba(245,242,234,.4);
+      letter-spacing: .05em;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+    .offer__badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: var(--serif);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      padding: 4px 12px;
+      border-radius: 1px;
+      margin-bottom: 12px;
+    }
+    .offer__price {
+      font-family: var(--latin);
+      font-size: clamp(44px, 12vw, 60px);
+      font-weight: 300;
+      color: var(--white);
+      letter-spacing: .02em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .offer__price sup {
+      font-size: .45em;
+      vertical-align: super;
+      font-weight: 300;
+    }
+    .offer__price-tax {
+      font-size: 11px;
+      color: rgba(245,242,234,.4);
+      letter-spacing: .05em;
+      margin-bottom: 24px;
+    }
+    .offer__perks {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+    .offer__perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--serif);
+      font-size: 13px;
+      color: rgba(245,242,234,.75);
+    }
+    .offer__perk::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .offer__delivery {
+      font-size: 12px;
+      color: rgba(245,242,234,.4);
+      letter-spacing: .05em;
+      margin-top: 20px;
+    }
+
+    /* ─────────────────────────────────────────
+       8. FAQ
+    ───────────────────────────────────────── */
+    .faq { background: var(--cream); color: var(--ink); }
+    .faq__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
+    .faq__list { margin-top: 40px; }
+    .faq__item {
+      border-bottom: 1px solid rgba(26,24,18,.10);
+    }
+    .faq__item:first-child { border-top: 1px solid rgba(26,24,18,.10); }
+    .faq__q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    .faq__q-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: .04em;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    .faq__q-label {
+      flex-shrink: 0;
+      font-family: var(--latin);
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 300;
+      letter-spacing: .12em;
+      margin-top: 1px;
+    }
+    .faq__icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      position: relative;
+    }
+    .faq__icon::before,
+    .faq__icon::after {
+      content: '';
+      position: absolute;
+      background: var(--gold);
+      transition: transform .3s, opacity .3s;
+    }
+    .faq__icon::before { width: 14px; height: 1px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .faq__icon::after  { width: 1px; height: 14px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .faq__item.open .faq__icon::after { transform: translate(-50%,-50%) rotate(90deg); opacity: 0; }
+    .faq__a {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .35s ease;
+    }
+    .faq__a-inner {
+      padding: 0 0 20px 28px;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--mid);
+      letter-spacing: .03em;
+    }
+
+    /* ─────────────────────────────────────────
+       9. FINAL CTA
+    ───────────────────────────────────────── */
+    .finalcta { background: var(--dark3); }
+    .finalcta__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; text-align: center; }
+    .finalcta__catch {
+      font-family: var(--serif);
+      font-size: clamp(18px, 5vw, 22px);
+      font-weight: 300;
+      letter-spacing: .1em;
+      line-height: 1.75;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .finalcta__sub {
+      font-size: 12px;
+      color: rgba(245,242,234,.45);
+      letter-spacing: .06em;
+      margin-bottom: 36px;
+    }
+    .finalcta__note {
+      font-size: 11px;
+      color: rgba(245,242,234,.35);
+      margin-top: 14px;
+      letter-spacing: .05em;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(245,242,234,.06);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer__logo {
+      width: 140px;
+      margin: 0 auto 20px;
+      opacity: .55;
+      filter: brightness(0) invert(1);
+    }
+    .footer__text {
+      font-size: 11px;
+      color: rgba(245,242,234,.3);
+      letter-spacing: .08em;
+      line-height: 1.9;
+    }
+    .footer__link {
+      color: rgba(245,242,234,.4);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ─────────────────────────────────────────
+       ANIMATIONS (IntersectionObserver driven)
+    ───────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE TWEAKS
+    ───────────────────────────────────────── */
+    @media (min-width: 480px) {
+      .ing-grid { grid-template-columns: 1fr 1fr; }
+      .how-card { grid-template-columns: 100px 1fr; }
+      .how-card__icon { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+  STICKY BOTTOM CTA
+════════════════════════════════════════════ -->
+<div class="sticky-cta" id="stickyBar">
+  <span class="sticky-cta__text">先行予約 20% OFF &amp; 送料無料</span>
+  <a
+    href="https://theginger.theshop.jp/items/144372874"
+    class="sticky-cta__btn"
+    target="_blank"
+    rel="noopener"
+  >今すぐ予約する</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+  1. HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="heroSection">
+  <div class="hero__bg"></div>
+  <div class="hero__inner">
+    <img
+      class="hero__logo"
+      src="参考情報/THE GINGER LP/THE GINGER_ロゴ.png"
+      alt="THE GINGER"
+      onerror="this.outerHTML='<p style=\'font-family:var(--latin);font-size:16px;font-weight:300;letter-spacing:.35em;color:#fff;margin:0 auto 32px;\'>THE GINGER</p>'"
+    >
+    <p class="hero__catch">
+      身体の芯から、<br>静かにあたたまる。
+    </p>
+    <p class="hero__sub">Crafted in Japan · Naturally Caffeine-Free</p>
+    <p class="hero__dead">先行予約受付中 ─ <strong>5月31日まで</strong></p>
+    <a
+      href="https://theginger.theshop.jp/items/144372874"
+      class="hero__btn"
+      target="_blank"
+      rel="noopener"
+    >先行予約する（20% OFF）</a>
+    <p class="hero__note">送料無料 ｜ 2026年6〜7月お届け予定</p>
+  </div>
+  <div class="hero__scroll">
+    <span>SCROLL</span>
+    <svg viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  2. FOR YOU — こんな方へ
+════════════════════════════════════════════ -->
+<section class="foryou">
+  <div class="foryou__inner">
+    <span class="ey tc">For You</span>
+    <div class="rule"></div>
+    <h2 class="h2 h2--dk tc">こんな方のために、<br>この一杯を。</h2>
+
+    <ul class="foryou__list">
+      <li class="foryou__item">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>冷えが気になる、身体を芯から温めたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.08s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>国産・有機原料にこだわった、本物を選びたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.16s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>漢方の知恵を、おいしく自然に取り入れたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.24s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>カフェインを控えて、夜もゆっくり過ごしたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.32s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>身体にやさしいものを、毎日の習慣にしたい</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  3. PRODUCT — 商品紹介
+════════════════════════════════════════════ -->
+<section class="product">
+  <div class="product__inner">
+    <span class="ey tc">Product</span>
+    <div class="rule"></div>
+
+    <p class="product__name-en">KUROMOJI × AZUKI</p>
+    <p class="product__name-ja">クロモジと小豆</p>
+
+    <!-- 商品パッケージ画像（差し替え可） -->
+    <div class="product__img-wrap fade-up">
+      <img
+        src="https://baseec-img-mng.akamaized.net/images/item/origin/a9044a536b5c0f2937df21b83c20a5af.png"
+        alt="GINGER TEA クロモジと小豆 ティーバッグ15個入り"
+      >
+    </div>
+
+    <p class="product__copy">
+      お湯をそそぐと、クロモジの清々しい香りがふわりと広がる。<br>
+      小豆の香ばしい甘み。生姜の、凛とした温もり。<br>
+      添加物ゼロ。ただ、素材だけ。
+    </p>
+    <div class="product__tags">
+      <div class="product__tag">全素材 国産・有機</div>
+      <div class="product__tag">ノンカフェイン</div>
+      <div class="product__tag">無添加</div>
+      <div class="product__tag">ティーバッグ15個入り</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  4. THREE REASONS — 選ばれる3つの理由
+════════════════════════════════════════════ -->
+<section class="reasons">
+  <div class="reasons__inner">
+    <span class="ey tc">Why THE GINGER</span>
+    <div class="rule"></div>
+    <h2 class="h2 h2--dk tc">選ばれる、3つの理由。</h2>
+
+    <div class="reasons__grid">
+
+      <div class="reason">
+        <div class="reason__num">01</div>
+        <div class="reason__body">
+          <p class="reason__head">全原料、国産・有機</p>
+          <p class="reason__text">生姜・小豆・棗・クロモジ、4素材すべて国産の有機・無農薬原料のみを使用。香料・甘味料・保存料など、添加物は一切使いません。</p>
+        </div>
+      </div>
+
+      <div class="reason" style="transition-delay:.12s">
+        <div class="reason__num">02</div>
+        <div class="reason__body">
+          <p class="reason__head">4つの漢方素材</p>
+          <p class="reason__text">乾姜・赤小豆・大棗・烏樟——いずれも古来の漢方処方に用いられてきた生薬。身体を内側から支える知恵を、一杯のお茶に。</p>
+        </div>
+      </div>
+
+      <div class="reason" style="transition-delay:.24s">
+        <div class="reason__num">03</div>
+        <div class="reason__body">
+          <p class="reason__head">ノンカフェイン</p>
+          <p class="reason__text">全素材ノンカフェイン。夜やリラックスタイムにも、妊娠中・授乳中の方にも。時間を選ばず、安心して飲める一杯です。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  LIFESTYLE BANNER
+════════════════════════════════════════════ -->
+<div class="lifestyle-banner">
+  <!-- ライフスタイル写真（差し替え可） -->
+  <img
+    src="https://baseec-img-mng.akamaized.net/apps/item_layout/images/origin/144372874/img_4a600bebaa4842add6cbda1c0d25b94d.png"
+    alt="THE GINGERのある日常"
+    loading="lazy"
+  >
+  <div class="lifestyle-banner__text">毎日の、おいしいお守り。</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+  5. INGREDIENTS — 素材の力
+════════════════════════════════════════════ -->
+<section class="ingredients">
+  <div class="ingredients__head">
+    <span class="ey tc">Ingredients</span>
+    <div class="rule"></div>
+    <h2 class="h2 h2--lt tc">
+      古くから身体を守ってきた素材を、<br>この一杯にだけ。
+    </h2>
+  </div>
+
+  <div class="ing-list">
+
+    <div class="ing-item">
+      <img
+        class="ing-item__img"
+        src="参考情報/THE GINGER LP/乾燥生姜.jpg"
+        alt="有機生姜（国産）"
+        loading="lazy"
+        onerror="this.src='https://baseec-img-mng.akamaized.net/images/shop_front/theginger-theshop-jp/b651ec4bc4305ad9107d4e1bbe59f4cc.png'"
+      >
+      <div class="ing-item__body">
+        <div class="ing-detail__hd">
+          <span class="ing-detail__num">01</span>
+          <span class="ing-detail__name">有機生姜（国産）</span>
+        </div>
+        <p class="ing-detail__kanpo">漢方生薬名：乾姜（かんきょう）</p>
+        <p class="ing-detail__strong">体の芯からじんわりと、あたためる。</p>
+        <p class="ing-detail__text">2000年以上の歴史を持つ漢方の代表的生薬。乾燥で生まれる「ショウガオール」が、内側から温める力を高めます。</p>
+      </div>
+    </div>
+
+    <div class="ing-item" style="transition-delay:.08s">
+      <img
+        class="ing-item__img"
+        src="参考情報/THE GINGER LP/小豆.jpg"
+        alt="有機小豆（国産）"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+      <div class="ing-item__body">
+        <div class="ing-detail__hd">
+          <span class="ing-detail__num">02</span>
+          <span class="ing-detail__name">有機小豆（国産）</span>
+        </div>
+        <p class="ing-detail__kanpo">漢方生薬名：赤小豆（せきしょうず）</p>
+        <p class="ing-detail__strong">香ばしく、やさしい甘み。</p>
+        <p class="ing-detail__text">「利水・清熱」の効能を持つ生薬として古くから親しまれ、この一杯では生姜の辛さをやさしく包みます。</p>
+      </div>
+    </div>
+
+    <div class="ing-item" style="transition-delay:.16s">
+      <img
+        class="ing-item__img"
+        src="参考情報/THE GINGER LP/棗（TB用）.png"
+        alt="棗・なつめ（国産）"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+      <div class="ing-item__body">
+        <div class="ing-detail__hd">
+          <span class="ing-detail__num">03</span>
+          <span class="ing-detail__name">棗 / なつめ（国産）</span>
+        </div>
+        <p class="ing-detail__kanpo">漢方生薬名：大棗（たいそう）</p>
+        <p class="ing-detail__strong">「大棗を使わない漢方医はいない」。</p>
+        <p class="ing-detail__text">漢方処方に最も頻用される生薬のひとつ。自然なまろやかさと甘みを加え、心を落ち着けます。</p>
+      </div>
+    </div>
+
+    <div class="ing-item" style="transition-delay:.24s">
+      <img
+        class="ing-item__img"
+        src="参考情報/THE GINGER LP/クロモジ（黒文字）.png"
+        alt="黒文字・クロモジ（国産）"
+        loading="lazy"
+        onerror="this.src='https://baseec-img-mng.akamaized.net/apps/item_layout/images/origin/144372874/img_01b2127acad3cd32137ae1eb863d9a99.png'"
+      >
+      <div class="ing-item__body">
+        <div class="ing-detail__hd">
+          <span class="ing-detail__num">04</span>
+          <span class="ing-detail__name">黒文字 / クロモジ（国産）</span>
+        </div>
+        <p class="ing-detail__kanpo">漢方生薬名：烏樟（うしょう）</p>
+        <p class="ing-detail__strong">千利休の時代から、茶道に根付く「和の香木」。</p>
+        <p class="ing-detail__text">和菓子を添える菓子楊枝として長く愛されてきたクロモジ。お湯をそそいだ瞬間、清々しい香りが広がります。</p>
+      </div>
+    </div>
+
+    <p class="ing-note">※ 画像はイメージです</p>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  6. HOW TO ENJOY — おいしい飲み方
+════════════════════════════════════════════ -->
+<section class="howtouse">
+  <div class="howtouse__inner">
+    <span class="ey tc">How to Enjoy</span>
+    <div class="rule"></div>
+    <h2 class="h2 h2--dk tc">おいしい飲み方</h2>
+
+    <div class="howtouse__grid">
+
+      <div class="how-card fade-up">
+        <div class="how-card__icon">
+          <!-- 湯気アイコン -->
+          <svg viewBox="0 0 32 32">
+            <path d="M10 26h12M16 26V18m-4-4c0-3 4-3 4-6m-8 6c0-3 4-3 4-6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="how-card__label">HOT</p>
+          <p class="how-card__title">ホットで</p>
+          <p class="how-card__text">カップにティーバッグを1つ入れ、95〜100℃のお湯を200ml注いで5〜7分。クロモジの清々しい香りとともに、じっくり蒸らしてください。</p>
+        </div>
+      </div>
+
+      <div class="how-card fade-up" style="transition-delay:.1s">
+        <div class="how-card__icon">
+          <!-- 氷アイコン -->
+          <svg viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="8" stroke-dasharray="2 3"/>
+            <line x1="16" y1="6" x2="16" y2="26" stroke-linecap="round"/>
+            <line x1="6" y1="16" x2="26" y2="16" stroke-linecap="round"/>
+            <line x1="9" y1="9" x2="23" y2="23" stroke-linecap="round"/>
+            <line x1="23" y1="9" x2="9" y2="23" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="how-card__label">ICED</p>
+          <p class="how-card__title">アイスで</p>
+          <p class="how-card__text">95〜100℃のお湯200mlで5〜7分しっかり蒸らし、たっぷりの氷の入ったグラスに注ぐ。夏の午後にも、すっきりとした飲み口で。</p>
+        </div>
+      </div>
+
+      <div class="how-card fade-up" style="transition-delay:.2s">
+        <div class="how-card__icon">
+          <!-- 炭酸アイコン -->
+          <svg viewBox="0 0 32 32">
+            <circle cx="10" cy="20" r="1.5" fill="var(--gold)" stroke="none"/>
+            <circle cx="16" cy="14" r="1.5" fill="var(--gold)" stroke="none"/>
+            <circle cx="22" cy="20" r="1.5" fill="var(--gold)" stroke="none"/>
+            <circle cx="13" cy="24" r="1" fill="var(--gold)" stroke="none"/>
+            <circle cx="19" cy="10" r="1" fill="var(--gold)" stroke="none"/>
+            <rect x="8" y="8" width="16" height="18" rx="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="how-card__label">SPARKLING</p>
+          <p class="how-card__title">炭酸水で割って</p>
+          <p class="how-card__text">しっかり蒸らして抽出し、はちみつや砂糖で甘みをつけてから炭酸水で割る。大人のジンジャーエール風に。レモンを一絞りしても。</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 炭酸割り写真（差し替え可） -->
+    <div class="howtouse__img fade-up">
+      <img
+        src="https://baseec-img-mng.akamaized.net/apps/item_layout/images/origin/144372874/img_725603c28ef22b78ec1a5973e48218d4.png"
+        alt="ジンジャーエール風アレンジ"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  7. OFFER — 先行予約
+════════════════════════════════════════════ -->
+<section class="offer">
+  <div class="offer__inner">
+    <span class="ey tc">Advance Reservation</span>
+    <div class="rule"></div>
+    <h2 class="offer__title">
+      先行予約を受け付けています。<br><strong style="font-weight:500;color:var(--gold)">受付は5月31日まで</strong>。
+    </h2>
+
+
+    <div class="offer__box">
+      <p class="offer__product">GINGER TEA クロモジと小豆</p>
+      <p class="offer__product-sub">ティーバッグ15個入り（3g × 15袋）</p>
+      <p class="offer__was">通常価格 ¥2,800（税込）</p>
+      <span class="offer__badge">先行予約 20% OFF</span>
+      <p class="offer__price"><sup>¥</sup>2,240</p>
+      <p class="offer__price-tax">税込</p>
+      <div class="offer__perks">
+        <div class="offer__perk">送料無料</div>
+        <div class="offer__perk">2026年6〜7月お届け予定</div>
+        <div class="offer__perk">国産有機・無添加・ノンカフェイン</div>
+      </div>
+      <p class="offer__delivery">※ 先行予約のため、お届けまでお時間をいただきます。ご了承ください。</p>
+    </div>
+
+    <a
+      href="https://theginger.theshop.jp/items/144372874"
+      class="btn"
+      target="_blank"
+      rel="noopener"
+    >先行予約する（20% OFF）</a>
+    <p style="margin-top:12px;font-size:11px;color:rgba(245,242,234,.35);letter-spacing:.05em">
+      BASEのショップページに移動します
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  8. FAQ
+════════════════════════════════════════════ -->
+<section class="faq">
+  <div class="faq__inner">
+    <span class="ey tc">FAQ</span>
+    <div class="rule"></div>
+    <h2 class="h2 h2--dk tc">よくあるご質問</h2>
+
+    <div class="faq__list">
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span class="faq__q-text">
+            <span class="faq__q-label">Q.</span>
+            <span>いつ頃届きますか？</span>
+          </span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a" role="region">
+          <div class="faq__a-inner">
+            2026年6〜7月のお届けを予定しております。正確な日程が確定次第、ご登録のメールアドレスにご連絡いたします。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span class="faq__q-text">
+            <span class="faq__q-label">Q.</span>
+            <span>カフェインは含まれていますか？</span>
+          </span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a" role="region">
+          <div class="faq__a-inner">
+            使用している全素材（生姜・小豆・棗・クロモジ）はすべてノンカフェインです。夜や就寝前でも、妊娠中・授乳中の方も安心してお召し上がりいただけます。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span class="faq__q-text">
+            <span class="faq__q-label">Q.</span>
+            <span>アレルギーが心配です。</span>
+          </span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a" role="region">
+          <div class="faq__a-inner">
+            原材料は有機生姜・有機小豆・棗・クロモジのみで、香料・保存料などの添加物は一切使用しておりません。小豆アレルギーの方はご注意ください。詳しくはショップページよりお問い合わせください。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span class="faq__q-text">
+            <span class="faq__q-label">Q.</span>
+            <span>定期購入はできますか？</span>
+          </span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__a" role="region">
+          <div class="faq__a-inner">
+            現在は単品のご購入のみとなっております。今後の展開については、SNSやメールにてお知らせいたします。
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  9. FINAL CTA
+════════════════════════════════════════════ -->
+<section class="finalcta">
+  <div class="finalcta__inner">
+    <img
+      class="hero__logo"
+      style="width:180px;margin:0 auto 32px;filter:brightness(0) invert(1);opacity:.7"
+      src="参考情報/THE GINGER LP/THE GINGER_ロゴ.png"
+      alt="THE GINGER"
+    >
+    <p class="finalcta__catch">
+      先行予約受付中。<br>お届けは2026年6〜7月を予定しています。
+    </p>
+    <p class="finalcta__sub">受付期間：〜5月31日 ／ 送料無料</p>
+    <a
+      href="https://theginger.theshop.jp/items/144372874"
+      class="btn"
+      target="_blank"
+      rel="noopener"
+    >今すぐ先行予約する</a>
+    <p class="finalcta__note">¥2,240（税込）｜ 通常価格 ¥2,800 より 20% OFF</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer">
+  <img
+    class="footer__logo"
+    src="参考情報/THE GINGER LP/THE GINGER_ロゴ.png"
+    alt="THE GINGER"
+    onerror="this.style.display='none'"
+  >
+  <p class="footer__text">
+    THE GINGER<br>
+    <a href="https://theginger.theshop.jp" class="footer__link" target="_blank" rel="noopener">theginger.theshop.jp</a><br>
+    <br>
+    © 2026 THE GINGER. All rights reserved.
+  </p>
+</footer>
+
+
+<script>
+  /* ─────────────────────────────────────────
+     STICKY CTA (hero を抜けたら表示)
+  ───────────────────────────────────────── */
+  (function(){
+    var bar = document.getElementById('stickyBar');
+    var hero = document.getElementById('heroSection');
+    if(!bar||!hero) return;
+    var io = new IntersectionObserver(function(entries){
+      bar.classList.toggle('show', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    io.observe(hero);
+  })();
+
+
+  /* ─────────────────────────────────────────
+     FAQ ACCORDION
+  ───────────────────────────────────────── */
+  document.querySelectorAll('.faq__q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq__item');
+      var ans  = item.querySelector('.faq__a');
+      var open = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq__item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq__a').style.maxHeight = '0';
+        el.querySelector('.faq__q').setAttribute('aria-expanded','false');
+      });
+      if(!open){
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* ─────────────────────────────────────────
+     INTERSECTION OBSERVER — fade / stagger
+  ───────────────────────────────────────── */
+  (function(){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(function(el){ io.observe(el); });
+    document.querySelectorAll('.foryou__item').forEach(function(el){ io.observe(el); });
+    document.querySelectorAll('.reason').forEach(function(el){ io.observe(el); });
+    document.querySelectorAll('.ing-item').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
