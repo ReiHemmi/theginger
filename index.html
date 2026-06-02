@@ -159,7 +159,7 @@
     ───────────────────────────────────────── */
     .hero {
       position: relative;
-      min-height: 100svh;
+      min-height: 82svh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -511,8 +511,8 @@
        4. THREE REASONS — 3つの特徴
     ───────────────────────────────────────── */
     .reasons {
-      background: var(--dark3);
-      color: var(--white);
+      background: var(--cream);
+      color: var(--ink);
     }
     .reasons__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
     .reasons__grid {
@@ -526,12 +526,12 @@
       grid-template-columns: 64px 1fr;
       gap: 0 20px;
       padding: 32px 0;
-      border-bottom: 1px solid rgba(245,242,234,.10);
+      border-bottom: 1px solid rgba(26,24,18,.10);
       opacity: 0;
       transform: translateX(-12px);
       transition: opacity .5s, transform .5s;
     }
-    .reason:first-child { border-top: 1px solid rgba(245,242,234,.10); }
+    .reason:first-child { border-top: 1px solid rgba(26,24,18,.10); }
     .reason.visible { opacity: 1; transform: translateX(0); }
     .reason__num {
       font-family: var(--latin);
@@ -547,20 +547,20 @@
       font-size: 17px;
       font-weight: 500;
       letter-spacing: .06em;
-      color: var(--white);
+      color: var(--ink);
       margin-bottom: 10px;
     }
     .reason__text {
       font-size: 13px;
       line-height: 1.9;
-      color: rgba(245,242,234,.65);
+      color: rgba(26,24,18,.65);
       letter-spacing: .03em;
     }
 
     /* ─────────────────────────────────────────
        5. INGREDIENTS — 素材
     ───────────────────────────────────────── */
-    .ingredients { background: var(--cream); color: var(--ink); }
+    .ingredients { background: var(--dark3); color: var(--white); }
     .ingredients__head { padding: 80px 24px 0; max-width: var(--cap); margin: 0 auto; text-align: center; }
 
     /* photo grid */
@@ -627,12 +627,12 @@
       gap: 20px;
       align-items: stretch;
       padding: 28px 0;
-      border-bottom: 1px solid rgba(26,24,18,.10);
+      border-bottom: 1px solid rgba(245,242,234,.10);
       opacity: 0;
       transform: translateY(12px);
       transition: opacity .5s, transform .5s;
     }
-    .ing-item:first-child { border-top: 1px solid rgba(26,24,18,.10); }
+    .ing-item:first-child { border-top: 1px solid rgba(245,242,234,.10); }
     .ing-item.visible { opacity: 1; transform: translateY(0); }
     .ing-item__img {
       width: 72px;
@@ -659,31 +659,31 @@
       font-family: var(--serif);
       font-size: 15px;
       font-weight: 400;
-      color: var(--ink);
+      color: var(--white);
       letter-spacing: .06em;
     }
     .ing-detail__kanpo {
       font-size: 11px;
-      color: rgba(26,24,18,.4);
+      color: rgba(245,242,234,.4);
       letter-spacing: .05em;
       margin-bottom: 8px;
     }
     .ing-detail__strong {
       font-family: var(--serif);
       font-size: 14px;
-      color: rgba(26,24,18,.85);
+      color: rgba(245,242,234,.85);
       letter-spacing: .05em;
       margin-bottom: 6px;
     }
     .ing-detail__text {
       font-size: 13px;
-      color: var(--mid);
+      color: rgba(245,242,234,.65);
       line-height: 1.9;
       letter-spacing: .03em;
     }
     .ing-note {
       font-size: 10px;
-      color: rgba(26,24,18,.2);
+      color: rgba(245,242,234,.2);
       letter-spacing: .05em;
       text-align: right;
       margin-top: 20px;
@@ -723,7 +723,7 @@
     /* ─────────────────────────────────────────
        6. HOW TO ENJOY — おいしい飲み方
     ───────────────────────────────────────── */
-    .howtouse { background: var(--dark2); color: var(--white); }
+    .howtouse { background: var(--cream); color: var(--ink); }
     .howtouse__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
     .howtouse__grid {
       margin-top: 48px;
@@ -766,13 +766,13 @@
       font-family: var(--serif);
       font-size: 16px;
       font-weight: 500;
-      color: var(--white);
+      color: var(--ink);
       letter-spacing: .06em;
       margin-bottom: 8px;
     }
     .how-card__text {
       font-size: 13px;
-      color: rgba(245,242,234,.65);
+      color: rgba(26,24,18,.65);
       line-height: 1.85;
       letter-spacing: .03em;
     }
@@ -1098,8 +1098,9 @@
       onerror="this.outerHTML='<p style=\'font-family:var(--latin);font-size:16px;font-weight:300;letter-spacing:.35em;color:#fff;margin:0 auto 32px;\'>THE GINGER</p>'"
     >
     <p class="hero__catch">
-      漢方の知恵で、<br>心と身体があたたまる一杯。
+      漢方の知恵で、<br>心と身体をあたためる一杯。
     </p>
+    <p class="hero__sub">Crafted in Japan · Naturally Caffeine-Free</p>
     <p class="hero__dead">ご好評につき1週間延長 ─ <strong>6月7日まで</strong></p>
     <a
       href="https://buy.stripe.com/6oUdRac3m9T94N593FcV200"
@@ -1117,7 +1118,52 @@
 
 
 <!-- ═══════════════════════════════════════════
-  2. PRODUCT — 商品紹介
+  2. FOR YOU — こんな方へ
+════════════════════════════════════════════ -->
+<section class="foryou">
+  <div class="foryou__inner">
+    <span class="ey tc">For You</span>
+    <div class="rule"></div>
+    <h2 class="h2 h2--dk tc">こんな方のために、<br>この一杯を。</h2>
+
+    <ul class="foryou__list">
+      <li class="foryou__item">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>冷えが気になる、身体を芯から温めたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.08s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>国産・有機または農薬不使用の原料にこだわった、本物を選びたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.16s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>漢方の知恵を、おいしく自然に取り入れたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.24s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>カフェインを控えて、夜もゆっくり過ごしたい</span>
+      </li>
+      <li class="foryou__item" style="transition-delay:.32s">
+        <span class="foryou__check">
+          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+        </span>
+        <span>身体にやさしいものを、毎日の習慣にしたい</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  3. PRODUCT — 商品紹介
 ════════════════════════════════════════════ -->
 <section class="product">
   <div class="product__inner">
@@ -1180,58 +1226,13 @@
 
 
 <!-- ═══════════════════════════════════════════
-  3. FOR YOU — こんな方へ
-════════════════════════════════════════════ -->
-<section class="foryou">
-  <div class="foryou__inner">
-    <span class="ey tc">For You</span>
-    <div class="rule"></div>
-    <h2 class="h2 h2--dk tc">こんな方のために、<br>この一杯を。</h2>
-
-    <ul class="foryou__list">
-      <li class="foryou__item">
-        <span class="foryou__check">
-          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
-        </span>
-        <span>冷えが気になる、身体を芯から温めたい</span>
-      </li>
-      <li class="foryou__item" style="transition-delay:.08s">
-        <span class="foryou__check">
-          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
-        </span>
-        <span>国産・有機または農薬不使用の原料にこだわった、本物を選びたい</span>
-      </li>
-      <li class="foryou__item" style="transition-delay:.16s">
-        <span class="foryou__check">
-          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
-        </span>
-        <span>漢方の知恵を、おいしく自然に取り入れたい</span>
-      </li>
-      <li class="foryou__item" style="transition-delay:.24s">
-        <span class="foryou__check">
-          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
-        </span>
-        <span>カフェインを控えて、夜もゆっくり過ごしたい</span>
-      </li>
-      <li class="foryou__item" style="transition-delay:.32s">
-        <span class="foryou__check">
-          <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
-        </span>
-        <span>身体にやさしいものを、毎日の習慣にしたい</span>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
   4. THREE REASONS — 選ばれる3つの理由
 ════════════════════════════════════════════ -->
 <section class="reasons">
   <div class="reasons__inner">
     <span class="ey tc">Why THE GINGER</span>
     <div class="rule"></div>
-    <h2 class="h2 h2--lt tc">選ばれる、3つの理由。</h2>
+    <h2 class="h2 h2--dk tc">選ばれる、3つの理由。</h2>
 
     <div class="reasons__grid">
 
@@ -1294,7 +1295,7 @@
   <div class="ingredients__head">
     <span class="ey tc">Ingredients</span>
     <div class="rule"></div>
-    <h2 class="h2 h2--dk tc">
+    <h2 class="h2 h2--lt tc">
       古くから身体を守ってきた素材を、<br>この一杯に。
     </h2>
   </div>
@@ -1386,7 +1387,7 @@
   <div class="howtouse__inner">
     <span class="ey tc">How to Enjoy</span>
     <div class="rule"></div>
-    <h2 class="h2 h2--lt tc">おいしい飲み方</h2>
+    <h2 class="h2 h2--dk tc">おいしい飲み方</h2>
 
     <div class="howtouse__grid">
 
@@ -1456,63 +1457,7 @@
 
 
 <!-- ═══════════════════════════════════════════
-  7. OFFER — 先行予約
-════════════════════════════════════════════ -->
-<section class="offer">
-  <div class="offer__inner">
-    <span class="ey tc">Advance Reservation</span>
-    <div class="rule"></div>
-    <h2 class="offer__title">
-      先行予約を受け付けています。<br><strong style="font-weight:500;color:var(--gold)">ご好評につき延長　受付は6月7日まで</strong>。
-    </h2>
-
-
-    <div class="offer__box">
-      <div class="product__img-wrap fade-up" style="max-width:200px; margin: 0 auto 24px;">
-        <img src="https://baseec-img-mng.akamaized.net/images/item/origin/a9044a536b5c0f2937df21b83c20a5af.png" alt="GINGER TEA クロモジと小豆">
-      </div>
-      <p class="offer__product">GINGER TEA クロモジと小豆</p>
-      <p class="offer__product-sub">THE GINGER</p>
-      <div class="product__tags">
-        <div class="product__tag">国産原料</div>
-        <div class="product__tag">有機／農薬不使用</div>
-        <div class="product__tag">ノンカフェイン</div>
-        <div class="product__tag">無添加</div>
-      </div>
-      <div class="product__specs" style="text-align:left;">
-        <div class="product__spec-row">
-          <span class="product__spec-dt">内容量</span>
-          <span class="product__spec-dd">45g（ティーバッグ 3g × 15個）</span>
-        </div>
-        <div class="product__spec-row">
-          <span class="product__spec-dt">原材料</span>
-          <span class="product__spec-dd">有機生姜・有機小豆・棗・黒文字（すべて国産）</span>
-        </div>
-        <div class="product__spec-row">
-          <span class="product__spec-dt">お届け</span>
-          <span class="product__spec-dd">2026年7月お届け予定</span>
-        </div>
-      </div>
-      <p class="offer__was">通常価格 ¥2,800（税込）</p>
-      <p class="offer__price"><sup>¥</sup>2,240</p>
-      <p class="offer__price-tax">税込 ／ 送料無料</p>
-    </div>
-
-    <a
-      href="https://buy.stripe.com/6oUdRac3m9T94N593FcV200"
-      class="btn"
-      target="_blank"
-      rel="noopener"
-    >先行予約する（20% OFF）</a>
-    <p style="margin-top:12px;font-size:11px;color:rgba(26,24,18,.35);letter-spacing:.05em">
-      Stripeの決済ページに移動します
-    </p>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-  8. FAQ
+  7. FAQ
 ════════════════════════════════════════════ -->
 <section class="faq">
   <div class="faq__inner">
@@ -1583,6 +1528,62 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+  8. OFFER — 先行予約
+════════════════════════════════════════════ -->
+<section class="offer">
+  <div class="offer__inner">
+    <span class="ey tc">Advance Reservation</span>
+    <div class="rule"></div>
+    <h2 class="offer__title">
+      先行予約を受け付けています。<br><strong style="font-weight:500;color:var(--gold)">ご好評につき延長　受付は6月7日まで</strong>。
+    </h2>
+
+
+    <div class="offer__box">
+      <div class="product__img-wrap fade-up" style="max-width:200px; margin: 0 auto 24px;">
+        <img src="https://baseec-img-mng.akamaized.net/images/item/origin/a9044a536b5c0f2937df21b83c20a5af.png" alt="GINGER TEA クロモジと小豆">
+      </div>
+      <p class="offer__product">GINGER TEA クロモジと小豆</p>
+      <p class="offer__product-sub">THE GINGER</p>
+      <div class="product__tags">
+        <div class="product__tag">国産原料</div>
+        <div class="product__tag">有機／農薬不使用</div>
+        <div class="product__tag">ノンカフェイン</div>
+        <div class="product__tag">無添加</div>
+      </div>
+      <div class="product__specs" style="text-align:left;">
+        <div class="product__spec-row">
+          <span class="product__spec-dt">内容量</span>
+          <span class="product__spec-dd">45g（ティーバッグ 3g × 15個）</span>
+        </div>
+        <div class="product__spec-row">
+          <span class="product__spec-dt">原材料</span>
+          <span class="product__spec-dd">有機生姜・有機小豆・棗・黒文字（すべて国産）</span>
+        </div>
+        <div class="product__spec-row">
+          <span class="product__spec-dt">お届け</span>
+          <span class="product__spec-dd">2026年7月お届け予定</span>
+        </div>
+      </div>
+      <p class="offer__was">通常価格 ¥2,800（税込）</p>
+      <p class="offer__price"><sup>¥</sup>2,240</p>
+      <p class="offer__price-tax">税込 ／ 送料無料</p>
+    </div>
+
+    <a
+      href="https://buy.stripe.com/6oUdRac3m9T94N593FcV200"
+      class="btn"
+      target="_blank"
+      rel="noopener"
+    >先行予約する（20% OFF）</a>
+    <p style="margin-top:12px;font-size:11px;color:rgba(26,24,18,.35);letter-spacing:.05em">
+      Stripeの決済ページに移動します
+    </p>
   </div>
 </section>
 
