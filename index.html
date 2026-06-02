@@ -1060,6 +1060,53 @@
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     /* ─────────────────────────────────────────
+       EXPERT / AUTHORITY
+    ───────────────────────────────────────── */
+    .expert { background: var(--cream); color: var(--ink); }
+    .expert__inner { padding: 80px 24px; max-width: var(--cap); margin: 0 auto; }
+    .expert__heading {
+      font-family: var(--serif);
+      font-size: clamp(19px, 5vw, 24px);
+      font-weight: 400;
+      letter-spacing: .07em;
+      line-height: 1.7;
+      color: var(--ink);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .expert__body { display: flex; gap: 24px; align-items: flex-start; }
+    .expert__avatar {
+      flex-shrink: 0;
+      width: 120px;
+      height: 160px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .expert__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .expert__content { padding-top: 4px; }
+    .expert__role { font-size: 11px; color: rgba(26,24,18,.45); letter-spacing: .06em; margin-bottom: 3px; }
+    .expert__name {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .expert__quote-text {
+      font-family: var(--serif);
+      font-size: 13px;
+      line-height: 2.0;
+      color: rgba(26,24,18,.70);
+      letter-spacing: .04em;
+    }
+
+    /* ─────────────────────────────────────────
        RESPONSIVE TWEAKS
     ───────────────────────────────────────── */
     @media (min-width: 480px) {
@@ -1283,6 +1330,31 @@
 
 
 <!-- ═══════════════════════════════════════════
+  EXPERT — ティーウェリスト監修
+════════════════════════════════════════════ -->
+<section class="expert">
+  <div class="expert__inner">
+    <p class="expert__heading">
+      ハーブティーの専門家が、<br>身体を想ってブレンド。
+    </p>
+
+    <div class="expert__body">
+      <div class="expert__avatar">
+        <img src="../本格訴求/assets/maker-portrait.png" alt="逸見 伶" loading="lazy">
+      </div>
+      <div class="expert__content">
+        <p class="expert__role">シニアティーウェリスト</p>
+        <p class="expert__name">逸見 伶</p>
+        <p class="expert__quote-text">
+          「THE GINGER」は、世界のティーの専門家であるティーウェリストがブレンド開発。有機生姜・有機小豆・クロモジ・棗など、漢方素材としても飲まれている素材にこだわり、毎日飲みやすい一杯に仕上げました。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
   5. INGREDIENTS — 素材の力
 ════════════════════════════════════════════ -->
 <section class="ingredients">
@@ -1395,7 +1467,7 @@
         <div>
           <p class="how-card__label">HOT</p>
           <p class="how-card__title">ホットで</p>
-          <p class="how-card__text">カップにティーバッグを1つ入れ、95〜100℃のお湯を200ml注いで5〜7分。蓋をしてじっくり蒸らしてください。</p>
+          <p class="how-card__text">カップにティーバッグを1つ入れ、95〜100℃のお湯を200ml注いで5〜7分。クロモジの清々しい香りとともに、じっくり蒸らしてください。</p>
         </div>
       </div>
 
@@ -1413,7 +1485,7 @@
         <div>
           <p class="how-card__label">ICED</p>
           <p class="how-card__title">アイスで</p>
-          <p class="how-card__text">少量のお湯（100ml程度）で濃いめに抽出し、たっぷりの氷を入れたグラスに一気に注いでください。</p>
+          <p class="how-card__text">少量のお湯（100ml程度）で濃いめに抽出し、たっぷりの氷を入れたグラスに一気に注いでください。氷で薄まらず、香りと味がしっかり残ります。</p>
         </div>
       </div>
 
@@ -1432,7 +1504,7 @@
         <div>
           <p class="how-card__label">SPARKLING</p>
           <p class="how-card__title">炭酸水で割って</p>
-          <p class="how-card__text">しっかり蒸らして抽出し、はちみつや砂糖で甘みをつけてから炭酸水で割ってください。大人のジンジャーエール風に。</p>
+          <p class="how-card__text">しっかり蒸らして抽出し、はちみつや砂糖で甘みをつけてから炭酸水で割ってください。大人のジンジャーエール風に。レモンを一絞りしても。</p>
         </div>
       </div>
 
