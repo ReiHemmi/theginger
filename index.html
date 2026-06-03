@@ -16,20 +16,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- ② Metaピクセルのベースコード -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://facebook.net');
-    fbq('init', '1509312850912687');
-    fbq('track', 'PageView');
-  </script>
-  
   <style>
     /* ─────────────────────────────────────────
        DESIGN TOKENS
@@ -263,7 +249,7 @@
       line-height: 2.0;
       color: rgba(255,255,255,.90);
       letter-spacing: .04em;
-      max-width: 300px;
+      max-width: 320px;
       margin: 0 auto 24px;
       text-align: center;
     }
@@ -401,6 +387,43 @@
       max-width: 280px;
     }
     .product__img-wrap img { border-radius: 2px; }
+
+    /* interval carousel */
+    .product__carousel-outer {
+      margin: 36px auto 40px;
+      max-width: 280px;
+      overflow: hidden;
+      position: relative;
+      cursor: grab;
+      user-select: none;
+    }
+    .product__carousel-outer.grabbing { cursor: grabbing; }
+    .product__track {
+      display: flex;
+      transition: transform .6s cubic-bezier(.4,0,.2,1);
+      will-change: transform;
+    }
+    .product__track .slide {
+      flex-shrink: 0;
+      display: block;
+      border-radius: 2px;
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding-top: 14px;
+    }
+    .carousel-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(201,160,23,.3);
+      border: none;
+      cursor: pointer;
+      transition: background .3s;
+      padding: 0;
+    }
+    .carousel-dot.active { background: var(--gold); }
     .product__name-en {
       font-family: var(--latin);
       font-size: 13px;
@@ -1175,10 +1198,10 @@
       <img src="https://raw.githubusercontent.com/ReiHemmi/theginger/65748b11079630e5d224e51005b21503ca3371df/%E3%83%86%E3%82%A3%E3%83%BC%E3%82%A6%E3%82%A7%E3%83%AA%E3%82%B9%E3%83%88%E7%9B%A3%E4%BF%AE.png" alt="ティーウェリスト監修" loading="lazy">
     </div>
     <p class="hero__catch">
-      漢方の知恵で、<br>心と身体をあたためる一杯。
+      漢方の知恵で、<br>心と身体に寄り添う「おまもり」。
     </p>
     <p class="hero__sub">Craft Ginger Tea</p>
-    <p class="hero__subcopy">世界中でセルフケアとして親しまれてきた生姜を、心と身体に寄り添う生姜茶に仕立てました。</p>
+    <p class="hero__subcopy">世界中でセルフケアとして親しまれてきた生姜を、心と身体をあたためる生姜茶に仕立てました。</p>
     <a
       href="https://buy.stripe.com/6oUdRac3m9T94N593FcV200"
       class="hero__btn"
@@ -1208,25 +1231,25 @@
         <span class="foryou__check">
           <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
         </span>
-        <span>冷えが気になる、身体を芯から温めたい</span>
+        <span>冷えが気になる、<span style="color:#C0392B;font-family:var(--serif);font-weight:700">身体を芯から温めたい</span></span>
       </li>
       <li class="foryou__item" style="transition-delay:.08s">
         <span class="foryou__check">
           <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
         </span>
-        <span>国産・有機または農薬不使用の原料にこだわった、本物を選びたい</span>
+        <span><span style="color:#C0392B;font-family:var(--serif);font-weight:700">漢方の知恵</span>をおいしく自然に取り入れたい</span>
       </li>
       <li class="foryou__item" style="transition-delay:.16s">
         <span class="foryou__check">
           <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
         </span>
-        <span>漢方の知恵を、おいしく自然に取り入れたい</span>
+        <span><span style="color:#C0392B;font-family:var(--serif);font-weight:700">国産・有機または農薬不使用の原料</span>にこだわった一杯を選びたい</span>
       </li>
       <li class="foryou__item" style="transition-delay:.24s">
         <span class="foryou__check">
           <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
         </span>
-        <span>カフェインを控えて、夜もゆっくり過ごしたい</span>
+        <span><span style="color:#C0392B;font-family:var(--serif);font-weight:700">カフェインを控えて</span>、夜もゆっくり過ごしたい</span>
       </li>
     </ul>
   </div>
@@ -1244,11 +1267,22 @@
     <p class="product__name-en">KUROMOJI × AZUKI</p>
     <p class="product__name-ja">クロモジと小豆</p>
 
-    <div class="product__img-wrap fade-up">
-      <img
-        src="https://raw.githubusercontent.com/ReiHemmi/theginger/6a3e9aac51f4731b3c3a96abddd64fac871ca575/THE%20GINGER_%E3%83%AA%E3%82%A2%E3%83%AB.png"
-        alt="GINGER TEA 小豆とクロモジ ティーバッグ15個入り"
-      >
+    <div class="product__carousel-outer fade-up">
+      <div class="product__track">
+        <img class="slide"
+          src="https://raw.githubusercontent.com/ReiHemmi/theginger/6a3e9aac51f4731b3c3a96abddd64fac871ca575/THE%20GINGER_%E3%83%AA%E3%82%A2%E3%83%AB.png"
+          alt="GINGER TEA 小豆とクロモジ ティーバッグ15個入り"
+        >
+        <img class="slide"
+          src="https://raw.githubusercontent.com/ReiHemmi/theginger/cd0b59eb772261b37dcc29ecb6ea75034a783095/ingredients.png"
+          alt="THE GINGER 原料イメージ"
+          loading="lazy"
+        >
+      </div>
+      <div class="carousel-dots">
+        <button class="carousel-dot active" aria-label="1枚目"></button>
+        <button class="carousel-dot" aria-label="2枚目"></button>
+      </div>
     </div>
 
     <div class="product__tags">
@@ -1737,6 +1771,67 @@
     document.querySelectorAll('.foryou__item').forEach(function(el){ io.observe(el); });
     document.querySelectorAll('.reason').forEach(function(el){ io.observe(el); });
     document.querySelectorAll('.ing-item').forEach(function(el){ io.observe(el); });
+  })();
+
+  /* interval carousel — always slides left */
+  (function(){
+    var outer  = document.querySelector('.product__carousel-outer');
+    if(!outer) return;
+    var track  = outer.querySelector('.product__track');
+    var dots   = outer.querySelectorAll('.carousel-dot');
+    var orig   = Array.from(track.querySelectorAll('.slide'));
+    var total  = orig.length;
+
+    /* append clone of first slide for seamless left-loop */
+    var clone = orig[0].cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+
+    var allSlides = track.querySelectorAll('.slide');
+    var current = 0;
+    var timer, startX, dragging = false;
+
+    function setWidths() {
+      var w = outer.offsetWidth;
+      allSlides.forEach(function(sl){ sl.style.width = w + 'px'; });
+    }
+    function updateDots(n) {
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === n % total); });
+    }
+    function goTo(n) {
+      current = n;
+      track.style.transition = 'transform .6s cubic-bezier(.4,0,.2,1)';
+      track.style.transform  = 'translateX(' + (-current * outer.offsetWidth) + 'px)';
+      updateDots(current);
+    }
+
+    /* after transitioning to clone, silently reset to real first slide */
+    track.addEventListener('transitionend', function(){
+      if(current >= total) {
+        track.style.transition = 'none';
+        current = 0;
+        track.style.transform = 'translateX(0)';
+        updateDots(0);
+      }
+    });
+
+    function startAuto() { timer = setInterval(function(){ goTo(current + 1); }, 4000); }
+    function pauseAuto()  { clearInterval(timer); }
+    function resumeAuto() { pauseAuto(); startAuto(); }
+
+    dots.forEach(function(d, i){
+      d.addEventListener('click', function(){ goTo(i); resumeAuto(); });
+    });
+
+    outer.addEventListener('mousedown',  function(e){ dragging = true; startX = e.pageX; pauseAuto(); outer.classList.add('grabbing'); });
+    outer.addEventListener('mouseup',    function(e){ if(!dragging) return; var d = startX - e.pageX; if(Math.abs(d) > 40) goTo(current + 1); dragging = false; outer.classList.remove('grabbing'); resumeAuto(); });
+    outer.addEventListener('mouseleave', function(e){ if(!dragging) return; dragging = false; outer.classList.remove('grabbing'); resumeAuto(); });
+    outer.addEventListener('touchstart', function(e){ startX = e.touches[0].pageX; pauseAuto(); }, { passive: true });
+    outer.addEventListener('touchend',   function(e){ var d = startX - e.changedTouches[0].pageX; if(Math.abs(d) > 40) goTo(current + 1); resumeAuto(); }, { passive: true });
+
+    window.addEventListener('resize', function(){ setWidths(); track.style.transition='none'; track.style.transform='translateX('+(-current*outer.offsetWidth)+'px)'; });
+    setWidths();
+    startAuto();
   })();
 </script>
 
