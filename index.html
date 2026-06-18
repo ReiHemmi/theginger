@@ -1925,5 +1925,23 @@
   })();
 </script>
 
+<!-- 80%スクロールで Metaピクセル ViewContent を1回だけ発火（広告由来の読了をMetaが計測） -->
+<script>
+(function(){
+  var fired = false;
+  function onScroll(){
+    if (fired) return;
+    var top = window.pageYOffset || document.documentElement.scrollTop;
+    var docH = document.documentElement.scrollHeight - window.innerHeight;
+    if (docH > 0 && (top / docH) >= 0.8){
+      fired = true;
+      if (typeof fbq === 'function'){ fbq('track', 'ViewContent'); }
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
 </body>
 </html>
