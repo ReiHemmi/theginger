@@ -1943,5 +1943,42 @@
 })();
 </script>
 
+<!-- セクション別 到達計測：各セクションが画面に半分入ったら GA4 に lp_sec_XX を1回だけ送る（80%ピクセルとは別枠・離脱分析用） -->
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  // LPの上から順。クラス名 → ダッシュボード表示名（番号付きで順序が崩れない）
+  var SECTIONS = [
+    ['hero',        '01_hero'],
+    ['foryou',      '02_foryou'],
+    ['product',     '03_product'],
+    ['reasons',     '04_reasons'],
+    ['expert',      '05_expert'],
+    ['ingredients', '06_ingredients'],
+    ['howtouse',    '07_howtouse'],
+    ['voice',       '08_voice'],
+    ['faq',         '09_faq'],
+    ['offer',       '10_offer']
+  ];
+  var seen = {};
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var label = e.target.getAttribute('data-sec');
+      if (!label || seen[label]) return;
+      seen[label] = true;
+      if (typeof gtag === 'function'){
+        gtag('event', 'lp_sec_' + label);  // 例: lp_sec_03_product
+      }
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 });  // セクションが50%見えたら「到達」とみなす
+  SECTIONS.forEach(function(pair){
+    var el = document.querySelector('section.' + pair[0]);
+    if (el){ el.setAttribute('data-sec', pair[1]); io.observe(el); }
+  });
+})();
+</script>
+
 </body>
 </html>
