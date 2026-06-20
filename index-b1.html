@@ -225,6 +225,10 @@
       line-height: 1.7;
       color: #fff;
       text-shadow: 0 0 10px rgba(60,60,60,1), 0 0 28px rgba(60,60,60,.95), 0 0 60px rgba(60,60,60,.85);
+      min-height: 3.4em;          /* 2行分の高さを確保（漢方LPと同じ縦幅にして詰まり解消） */
+      display: flex;
+      align-items: center;        /* 1行コピーを上下中央に置き、上下に均等の余白をつくる */
+      justify-content: center;
       margin-bottom: 10px;
     }
     .hero__sub {
