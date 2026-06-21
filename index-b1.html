@@ -1764,6 +1764,44 @@
     <p style="margin-top:12px;font-size:11px;color:rgba(26,24,18,.35);letter-spacing:.05em">
       Stripeの決済ページに移動します
     </p>
+
+    <!-- メルマガ登録（控えめなサブCTA・お得情報/入荷通知。Googleフォームへ送信） -->
+    <style>
+      .nlsignup { max-width: 360px; margin: 36px auto 0; text-align: center; }
+      .nlsignup__lead { font-size: 12px; line-height: 1.7; color: rgba(245,242,234,.6); letter-spacing: .04em; margin-bottom: 12px; }
+      .nlsignup__row { display: flex; gap: 8px; }
+      .nlsignup__input { flex: 1; min-width: 0; padding: 12px 14px; background: rgba(0,0,0,.3); border: 1px solid rgba(201,160,23,.5); border-radius: 4px; color: #F5F2EA; font-size: 14px; letter-spacing: .03em; }
+      .nlsignup__input::placeholder { color: rgba(245,242,234,.35); }
+      .nlsignup__input:focus { outline: none; border-color: #C9A017; }
+      .nlsignup__btn { flex-shrink: 0; padding: 12px 18px; background: transparent; border: 1px solid #C9A017; border-radius: 4px; color: #C9A017; font-size: 13px; letter-spacing: .06em; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s; }
+      .nlsignup__btn:hover { background: #C9A017; color: #0C0C0C; }
+      .nlsignup__done { font-size: 13px; color: #C9A017; letter-spacing: .04em; padding: 10px 0; display: none; }
+    </style>
+    <div class="nlsignup">
+      <p class="nlsignup__lead">今すぐは迷う…という方へ。<br>お得な情報や入荷のお知らせを、メールでお届けします。</p>
+      <form class="nlsignup__row" id="nlForm" novalidate>
+        <input class="nlsignup__input" id="nlEmail" type="email" inputmode="email" autocomplete="email" placeholder="メールアドレス" required>
+        <button class="nlsignup__btn" type="submit">登録する</button>
+      </form>
+      <p class="nlsignup__done" id="nlDone">ご登録ありがとうございます。</p>
+    </div>
+    <script>
+    (function(){
+      var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSeWGVFh6BXdIksTuoLm9I3O1yQrlPQJLqp9oT8j6972L4M1Wg/formResponse';
+      var ENTRY = 'entry.32603133';
+      var form = document.getElementById('nlForm');
+      if (form) form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var email = (document.getElementById('nlEmail').value || '').trim();
+        if (email.indexOf('@') < 1) return;
+        var fd = new FormData(); fd.append(ENTRY, email);
+        fetch(FORM, { method: 'POST', mode: 'no-cors', body: fd });
+        if (typeof gtag === 'function') gtag('event', 'newsletter_signup_b');
+        form.style.display = 'none';
+        document.getElementById('nlDone').style.display = 'block';
+      });
+    })();
+    </script>
   </div>
 </section>
 
